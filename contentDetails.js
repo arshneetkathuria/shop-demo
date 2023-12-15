@@ -43,7 +43,7 @@ function dynamicContentDetails(ob)
     detailsDiv.id = 'details'
 
     let h3DetailsDiv = document.createElement('h3')
-    let h3DetailsText = document.createTextNode('Rs ' + ob.price)
+    let h3DetailsText = document.createTextNode('$ ' + ob.price/100)
     h3DetailsDiv.appendChild(h3DetailsText)
 
     let h3 = document.createElement('h3')
@@ -96,6 +96,10 @@ function dynamicContentDetails(ob)
         }
         document.cookie = "orderId=" + order + ",counter=" + counter
         document.getElementById("badge").innerHTML = counter
+        setTimeout(function() {
+            window.location.href = 'orderPlaced.html';
+        }, 1000);
+
         console.log(document.cookie)
     }
     buttonTag.appendChild(buttonText)

@@ -67,7 +67,10 @@ h2
 {
     color: rgb(3, 94, 94);
 }
-
+h1
+{
+    padding-top:6rem;
+}
 /* ----------------------------- MEDIA QUERY --------------------------- */
 
 @media(max-width: 1070px)
